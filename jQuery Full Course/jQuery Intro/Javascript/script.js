@@ -13,7 +13,7 @@ $("document").ready(function(){
   $("h1:last").css("color", "blue")
 
 
-  $("ol li:first-child").css("color", "purple") //grabs the first "li" tag that's a child of ol.
+  $("ol li:first-child").css("color", "purple") //grabs the first "li" tag that's a child or grandchild of ol.
   
   $("li:last-of-type")
     .css("color", "orange") //grabs the last "li" among siblings.

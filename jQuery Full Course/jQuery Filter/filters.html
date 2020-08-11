@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filters in jQuery</title>
+</head>
+<body>
+  <h1>filter() is the opposite of not() method.</h1>
+
+  <h2>first h2</h2>
+  <h2 class="getMe">second h2 $("h2").filter(".getMe")</h2>
+  <h2 class="getMe">third h2 $("h2").filter(".getMe")</h2>
+  <h2>fourth h2</h2>
+
+  <ul>
+    <li>list item 1</li>
+    <li>list item 2 $("li").filter(":nth-child(2n)")</li>
+    <li>list item 3</li>
+    <li>list item 4 $("li").filter(":nth-child(2n)")</li>
+    <li>list item 5</li>
+    <li>list item 6 $("li").filter(":nth-child(2n)")</li>
+  </ul>
+
+  <div id="functionFilter">
+    <p>direct descendant of #functionFilter</p>
+    <p>direct descendant of #functionFilter</p>
+    <p>Click me</p>
+    <p>direct descendant of #functionFilter</p>
+    <p>direct descendant of #functionFilter</p>
+    <div id="nestDiv">
+      <p>p tag in #nestDiv. Grandchild of #functionFilter</p>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    
+    $("h2").filter(".getMe").css("color", "orange") //all h2's, with the class .getMe. Same as...
+    // $("h2.getMe").css("color", "orange")
+
+    $("li").filter(":nth-child(2n)").css( "background-color", "red" );
+
+    $("#functionFilter p").css("color", "green") //all p-tags with #functionFilter ancestor
+
+    $("#functionFilter>p").css("text-decoration", "underline") //p-tags w/ #functionFilter direct parent
+
+    $("#functionFilter>p").filter(function(){ //filters ONLY the p-tags with text = "Click me"
+      return($(this).text() == "Click me")
+    }).on("click", function(){
+      $(this).css("text-decoration", "line-through")
+    })
+  </script>
+</body>
+</html>
