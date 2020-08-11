@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Full Tutorial</title>
+  <style>
+    .red{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- https://www.youtube.com/watch?v=ScoURsEM_yU -->
+  <h1>HTML, CSS, Animation, AJAX with jQuery</h1>
+  <p>jQuery lets us create events, retrieve data on events, animations and customizations.</p>
+  <h1>This is the 2nd h1</h1>
+  <h1>This is the 3rd h1</h1>
+  
+  <h3>
+    <ol id="firstList">
+      <li>first li tag with parent of ol: $("ol li:first-child")</li>
+      <li>Item 2</li>
+      <li>List 1 Item 3</li>
+      <li>last li tag with li siblings  $("li:last-of-type")</li>
+    </ol>
+  </h3>
+
+  <h3>
+    <ul id="secondList">
+      <li>List 2 item 1</li>
+      <li>List 2 item 2</li>
+      <li>List 2 "ul li:nth-child(3)" color green</li>
+      <li>List 2: last li tag among siblings $("li:last-of-type")</li>
+    </ul>
+  </h3>
+  
+  <h3>
+    <ul id="thirdList">
+      <li>List 3: item 1</li>
+      <li>List 3: item 2</li>
+      <li>List 3: "ul li:nth-child(3)" color green</li>
+      <li>list 3: last li tag among siblings $("li:last-of-type")</li>
+    </ul>
+  </h3>
+
+  <form>
+    <label for="name">This label is proceeded by an input tag.  $("label + input")</label>
+    <input name="name"  placeholder="name">
+    <input name="email" type="email"  placeholder="email">
+    <input name="password" type="password" placeholder="$(':password')">
+    <button type="submit">SUBMIT $(":submit")</button>
+  </form>
+
+
+  <table>
+    <tr><td>Row with Index #0</td></tr>
+    <tr><td>$("tr:odd")</td></tr>
+    <tr><td>Row with Index #2</td></tr>
+    <tr><td>Row with Index #3</td></tr>
+    <tr><td>Row with Index #4</td></tr>
+    <tr><td>Row with Index #5</td></tr>
+  </table>
+
+  <p>
+    
+  </p>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="Javascript/script.js"></script>
+</body>
+</html>
